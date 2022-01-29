@@ -42,12 +42,12 @@ function showNotes(){
     if(notesobj.length!=0){
         notesEle.innerHTML=html;
     }else{
-        notesEle.innerHTML=`Nothing to show! Use "Add a note" section above to add notes.`;
+        notesEle.innerHTML=`Nothing to show! Use "ADD TO LIST" section above to add your task.`;
     }
 }
 //function to delete node
 function deleteNote(index){
-    console.log("I am delete");
+    // console.log("I am delete");
 
     let notes=localStorage.getItem("notes");
     if(notes==null){
@@ -63,7 +63,7 @@ let search=document.getElementById("searchTxt");
 search.addEventListener("input",function(){
     
     let inputval=search.value.toLowerCase();
-    console.log("input event fired",inputval);
+    // console.log("input event fired",inputval);
     let noteCard=document.getElementsByClassName("noteCard");
     Array.from(noteCard).forEach(function(element){
         let cardTxt=element.getElementsByTagName("p")[0].innerText;
